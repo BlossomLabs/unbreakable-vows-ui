@@ -14,7 +14,7 @@
     "test": "jest",
     "test:ci": "jest --ci --coverage",
     "test:watch": "jest --watch",
-    "test:stage": "jest --findRelatedTests"
+    "test:stage": "jest --findRelatedTests --passWithNoTests"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.1",
