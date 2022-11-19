@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Box } from "@chakra-ui/react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 
@@ -6,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <Box className="App" background={"red"}>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -31,7 +32,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </div>
+    </Box>
   );
 }
 
