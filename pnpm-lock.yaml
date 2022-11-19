@@ -7,6 +7,8 @@ specifiers:
   '@chakra-ui/react': ^2.4.1
   '@emotion/react': ^11.10.5
   '@emotion/styled': ^11.10.5
+  '@fontsource/crimson-pro': ^4.5.10
+  '@fontsource/inter': ^4.5.14
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
   '@testing-library/user-event': ^14.4.3
@@ -37,6 +39,8 @@ dependencies:
   '@chakra-ui/react': 2.4.1_fqfjrcf4r5ejjaxw4ez4knwbra
   '@emotion/react': 11.10.5_fan5qbzahqtxlm5dzefqlqx5ia
   '@emotion/styled': 11.10.5_otcjdfkheatawhug6fwk7ldzni
+  '@fontsource/crimson-pro': 4.5.10
+  '@fontsource/inter': 4.5.14
   framer-motion: 7.6.7_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -3551,6 +3555,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fontsource/crimson-pro/4.5.10:
+    resolution: {integrity: sha512-4L7B+woKIWiwOQrCvvpAQeEob3xoq5fVLTyt0YhXVafy2KWBTCcFVo/Y9n0UpDtGso9jN8pMo3SrYa3V6IayVw==}
+    dev: false
+
+  /@fontsource/inter/4.5.14:
+    resolution: {integrity: sha512-JDC9AocdPLuGsASkvWw9hS5gtHE7K9dOwL98XLrk5yjYqxy4uVnScG58NUvFMJDVJRl/7c8Wnap6PEs+7Zvj1Q==}
+    dev: false
 
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
