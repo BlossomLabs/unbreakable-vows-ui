@@ -1,20 +1,34 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    jest: true,
-  },
-  extends: ["plugin:react/recommended", "xo", "prettier"],
-  overrides: [
-    {
-      extends: ["xo-typescript"],
-      files: ["*.ts", "*.tsx"],
-    },
-  ],
+  root: true,
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    ecmaFeatures: {
+      impliedStrict: true,
+      experimentalObjectRestSpread: true,
+    },
+    allowImportExportEverywhere: true,
   },
-  plugins: ["react"],
-  rules: {},
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  ignorePatterns: ["node_modules", "dist"],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "react-app",
+    "react-app/jest",
+    "plugin:prettier/recommended",
+  ],
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+  },
 };
