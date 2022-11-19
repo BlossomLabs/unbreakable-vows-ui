@@ -3,7 +3,7 @@ name: Analysis and Testing
 on:
   pull_request:
   push:
-    branches: [master, next]
+    branches: [main, next]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
