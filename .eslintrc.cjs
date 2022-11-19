@@ -25,10 +25,18 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "react-app",
     "react-app/jest",
+    "plugin:jest-dom/recommended",
     "prettier",
   ],
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "testing-library"],
   rules: {
     "react/react-in-jsx-scope": "off",
   },
+  overrides: [
+    // Only uses Testing Library lint rules in test files
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"],
+    },
+  ],
 };
