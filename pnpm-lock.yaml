@@ -4,6 +4,7 @@ specifiers:
   '@babel/preset-env': ^7.20.2
   '@babel/preset-react': ^7.18.6
   '@babel/preset-typescript': ^7.18.6
+  '@chakra-ui/icons': ^2.0.12
   '@chakra-ui/react': ^2.4.1
   '@emotion/react': ^11.10.5
   '@emotion/styled': ^11.10.5
@@ -36,6 +37,7 @@ specifiers:
   vite: ^3.2.3
 
 dependencies:
+  '@chakra-ui/icons': 2.0.12_react@18.2.0
   '@chakra-ui/react': 2.4.1_fqfjrcf4r5ejjaxw4ez4knwbra
   '@emotion/react': 11.10.5_fan5qbzahqtxlm5dzefqlqx5ia
   '@emotion/styled': 11.10.5_otcjdfkheatawhug6fwk7ldzni
@@ -2605,6 +2607,26 @@ packages:
     dependencies:
       '@chakra-ui/shared-utils': 2.0.3
       '@chakra-ui/system': 2.3.3_dovxhg2tvkkxkdnqyoum6wzcxm
+      react: 18.2.0
+    dev: false
+
+  /@chakra-ui/icon/3.0.12_react@18.2.0:
+    resolution: {integrity: sha512-VbUqgMcoZ26P1MtZdUqlxAKYDi1Bt8sSPNRID8QOwWfqyRYrbzabORVhKR3gpi6GaINjm7KRHIXHarj3u6EWdA==}
+    peerDependencies:
+      '@chakra-ui/system': '>=2.0.0'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/shared-utils': 2.0.3
+      react: 18.2.0
+    dev: false
+
+  /@chakra-ui/icons/2.0.12_react@18.2.0:
+    resolution: {integrity: sha512-lZyB96Yic5qM3gWp/QlQuD8WyS+V+19mjNxFW7IVmcn7fm+bLsnPrVPv2Qmpcs6/d4jsUyc1broyuyM+Urtg8Q==}
+    peerDependencies:
+      '@chakra-ui/system': '>=2.0.0'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/icon': 3.0.12_react@18.2.0
       react: 18.2.0
     dev: false
 
