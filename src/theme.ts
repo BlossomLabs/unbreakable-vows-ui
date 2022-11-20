@@ -75,6 +75,9 @@ const theme = {
     Text,
     Heading,
   },
+  sizes: {
+    "4xs": "10rem",
+  },
   colors: {
     primary: {
       300: "rgba(252, 218, 130, 1)", // gold
