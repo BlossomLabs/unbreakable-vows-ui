@@ -90,7 +90,7 @@ function App() {
               })}
             </Box>
           </Box>
-          <Box bgColor={"black"} p={10}>
+          <Box bgColor={"black"} p={8}>
             <Heading
               as={"h4"}
               variant={"h2"}
@@ -118,6 +118,48 @@ function App() {
                 </Button>
                 <Button variant={"link"} size={"sm"}>
                   Go back
+                </Button>
+              </HStack>
+            </VStack>
+          </Box>
+
+          <Box bgColor={"black"} p={8}>
+            <Heading
+              as={"h4"}
+              variant={"h2"}
+              size={"md"}
+              textAlign={"center"}
+              pb={8}
+              color={"secondary.50"}
+            >
+              Icon Buttons
+            </Heading>
+            <VStack spacing={10}>
+              <HStack spacing={5}>
+                <Button
+                  aria-label="Copy link"
+                  leftIcon={<Icons.CopyIcon />}
+                  variant={"outline"}
+                  justifyContent={"flex-start"}
+                >
+                  Copy link
+                </Button>
+                <Button
+                  aria-label="Copy link"
+                  leftIcon={<Icons.PlusIcon />}
+                  variant={"solid"}
+                  size={"lg"}
+                >
+                  Connect
+                </Button>
+                <Button
+                  aria-label="Copy link"
+                  leftIcon={<Icons.CopyIcon />}
+                  variant={"outline"}
+                  justifyContent={"flex-start"}
+                  isDisabled
+                >
+                  Copy link
                 </Button>
               </HStack>
             </VStack>
