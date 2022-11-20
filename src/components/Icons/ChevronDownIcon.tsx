@@ -8,9 +8,9 @@ const ChevronDownIcon = createIcon({
   path: [
     <path
       fill="#FCDA82"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="m14.001 15.061 4.667-4.478a.305.305 0 0 1 .423.005l.82.801a.29.29 0 0 1 .005.415l-5.698 5.47a.28.28 0 0 1-.217.08.297.297 0 0 1-.217-.08l-5.698-5.47a.29.29 0 0 1 .005-.415l.82-.8a.305.305 0 0 1 .423-.006l4.667 4.478Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />,
     <mask
       id="a"
@@ -25,9 +25,9 @@ const ChevronDownIcon = createIcon({
     >
       <path
         fill="#fff"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m14.001 15.061 4.667-4.478a.305.305 0 0 1 .423.005l.82.801a.29.29 0 0 1 .005.415l-5.698 5.47a.28.28 0 0 1-.217.08.297.297 0 0 1-.217-.08l-5.698-5.47a.29.29 0 0 1 .005-.415l.82-.8a.305.305 0 0 1 .423-.006l4.667 4.478Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </mask>,
     <g mask="url(#a)">

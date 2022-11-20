@@ -1,5 +1,6 @@
 import { VStack, Text, Center, Heading, Box, HStack } from "@chakra-ui/react";
-import { FeatherIcon, HatIcon, PotionIcon, OwlIcon } from "./components/Icons";
+import * as Icons from "./components/Icons";
+import * as Illustrations from "./components/Illustrations";
 
 function App() {
   const textVariants = [
@@ -16,7 +17,7 @@ function App() {
   ];
 
   return (
-    <Center minH={"100vh"}>
+    <Center minH={"100vh"} p={10}>
       <HStack>
         <VStack spacing={4} width={"50%"}>
           <Box pb={8}>
@@ -56,7 +57,7 @@ function App() {
             </VStack>
           </Box>
         </VStack>
-        <VStack>
+        <VStack width={"50%"}>
           <Heading
             as={"h3"}
             variant={"h2"}
@@ -67,10 +68,17 @@ function App() {
             Icons
           </Heading>
           <Box>
-            <HatIcon boxSize={"4xs"} />
-            <FeatherIcon boxSize={"4xs"} />
-            <PotionIcon boxSize={"4xs"} />
-            <OwlIcon boxSize={"4xs"} />
+            <Illustrations.HatIcon boxSize={"4xs"} />
+            <Illustrations.FeatherIcon boxSize={"4xs"} />
+            <Illustrations.PotionIcon boxSize={"4xs"} />
+            <Illustrations.OwlIcon boxSize={"4xs"} />
+          </Box>
+          <Box>
+            {Object.keys(Icons).map((IconName, i) => {
+              const Icon = Icons[IconName as keyof typeof Icons];
+
+              return <Icon key={`${IconName}-${i}`} boxSize={8} />;
+            })}
           </Box>
         </VStack>
       </HStack>

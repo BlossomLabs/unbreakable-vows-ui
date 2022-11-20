@@ -3,7 +3,7 @@ import { createIcon } from "@chakra-ui/icons";
 // using `path`
 const HistoryIcon = createIcon({
   displayName: "HistoryIcon",
-  viewBox: "0 0 160 160",
+  viewBox: "0 0 24 24",
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: [
     <path

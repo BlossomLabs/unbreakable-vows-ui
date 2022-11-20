@@ -16,9 +16,9 @@ const LockIcon = createIcon({
     />,
     <path
       fill="#E6E6E6"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M12.869 3.042A3.958 3.958 0 0 0 8.91 7v4a1.042 1.042 0 0 1-2.083 0V7A6.042 6.042 0 1 1 18.91 7v4a1.042 1.042 0 0 1-2.083 0V7a3.958 3.958 0 0 0-3.958-3.958Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />,
   ],
 });

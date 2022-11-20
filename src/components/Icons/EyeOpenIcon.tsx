@@ -1,16 +1,24 @@
 import { createIcon } from "@chakra-ui/icons";
 
 // using `path`
-const DoneIcon = createIcon({
-  displayName: "DoneIcon",
+const EyeOpenIcon = createIcon({
+  displayName: "EyeOpenIcon",
   viewBox: "0 0 24 24",
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
-  path: (
+  path: [
     <path
-      fill="#252527"
-      d="m9 16.2-3.5-3.5a.99.99 0 1 0-1.4 1.4L9 19 20.3 7.7a.99.99 0 1 0-1.4-1.4L9 16.2Z"
-    />
-  ),
+      stroke="#fff"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M12 5.25C4.5 5.25 1.5 12 1.5 12s3 6.75 10.5 6.75S22.5 12 22.5 12s-3-6.75-10.5-6.75Z"
+    />,
+    <path
+      stroke="#fff"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+    />,
+  ],
 });
 
-export default DoneIcon;
+export default EyeOpenIcon;
