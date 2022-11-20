@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
+import Vow from "./components/Vow";
 
 function App() {
   const textVariants = [
@@ -63,6 +64,9 @@ function App() {
                 </Heading>
               ))}
             </VStack>
+          </Box>
+          <Box>
+            <Vow isSelected={false}>Employment Agreement</Vow>
           </Box>
         </VStack>
         <VStack width={"50%"}>
