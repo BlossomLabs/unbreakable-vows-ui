@@ -19,3 +19,4 @@ export { default as PencilIcon } from "./PencilIcon";
 export { default as PlusIcon } from "./PlusIcon";
 export { default as SearchIcon } from "./SearchIcon";
 export { default as TerminateIcon } from "./TerminateIcon";
+export { default as WalletIcon } from "./WalletIcon";
