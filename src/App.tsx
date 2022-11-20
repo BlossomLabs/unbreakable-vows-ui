@@ -1,4 +1,12 @@
-import { VStack, Text, Center, Heading, Box, HStack } from "@chakra-ui/react";
+import {
+  VStack,
+  Text,
+  Center,
+  Heading,
+  Box,
+  HStack,
+  Button,
+} from "@chakra-ui/react";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
 
@@ -58,27 +66,61 @@ function App() {
           </Box>
         </VStack>
         <VStack width={"50%"}>
-          <Heading
-            as={"h3"}
-            variant={"h2"}
-            size={"md"}
-            textAlign={"center"}
-            pb={8}
-          >
-            Icons
-          </Heading>
           <Box>
-            <Illustrations.HatIcon boxSize={"4xs"} />
-            <Illustrations.FeatherIcon boxSize={"4xs"} />
-            <Illustrations.PotionIcon boxSize={"4xs"} />
-            <Illustrations.OwlIcon boxSize={"4xs"} />
-          </Box>
-          <Box>
-            {Object.keys(Icons).map((IconName, i) => {
-              const Icon = Icons[IconName as keyof typeof Icons];
+            <Heading
+              as={"h3"}
+              variant={"h2"}
+              size={"md"}
+              textAlign={"center"}
+              pb={8}
+            >
+              Icons
+            </Heading>
+            <Box>
+              <Illustrations.HatIcon boxSize={"4xs"} />
+              <Illustrations.FeatherIcon boxSize={"4xs"} />
+              <Illustrations.PotionIcon boxSize={"4xs"} />
+              <Illustrations.OwlIcon boxSize={"4xs"} />
+            </Box>
+            <Box>
+              {Object.keys(Icons).map((IconName, i) => {
+                const Icon = Icons[IconName as keyof typeof Icons];
 
-              return <Icon key={`${IconName}-${i}`} boxSize={8} />;
-            })}
+                return <Icon key={`${IconName}-${i}`} boxSize={8} />;
+              })}
+            </Box>
+          </Box>
+          <Box bgColor={"black"} p={10}>
+            <Heading
+              as={"h4"}
+              variant={"h2"}
+              size={"md"}
+              textAlign={"center"}
+              pb={8}
+              color={"secondary.50"}
+            >
+              Buttons
+            </Heading>
+            <VStack spacing={10}>
+              <HStack spacing={5}>
+                <Button variant={"outline"} isDisabled>
+                  Create new vow
+                </Button>
+                <Button variant={"solid"}>Create new vow</Button>
+                <Button variant={"link"} size={"md"}>
+                  See all
+                </Button>
+              </HStack>
+              <HStack spacing={5}>
+                <Button variant={"outline"}>Accept</Button>
+                <Button variant={"solid"} isDisabled>
+                  Accept
+                </Button>
+                <Button variant={"link"} size={"sm"}>
+                  Go back
+                </Button>
+              </HStack>
+            </VStack>
           </Box>
         </VStack>
       </HStack>
