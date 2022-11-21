@@ -8,7 +8,7 @@ const SearchIcon = createIcon({
   path: (
     <path
       stroke="#FCDA82"
-      stroke-linecap="round"
+      strokeLinecap="round"
       stroke-linejoin="round"
       stroke-width="2"
       d="M11.774 18a6.857 6.857 0 1 0 0-13.714 6.857 6.857 0 0 0 0 13.714ZM20.345 19.715l-3.728-3.729"
