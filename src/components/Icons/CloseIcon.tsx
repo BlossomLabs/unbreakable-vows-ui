@@ -7,7 +7,7 @@ const CloseIcon = createIcon({
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: (
     <path
-      fill="#252527"
+      fill="currentColor"
       d="M18.697 7.115a.997.997 0 1 0-1.41-1.41l-4.885 4.885-4.885-4.885a.997.997 0 0 0-1.41 1.41L10.992 12l-4.885 4.885a.997.997 0 0 0 1.41 1.41l4.885-4.885 4.885 4.885a.997.997 0 1 0 1.41-1.41L13.812 12l4.885-4.885Z"
     />
   ),

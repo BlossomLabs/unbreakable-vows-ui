@@ -10,8 +10,8 @@ const LockIcon = createIcon({
       fill="#E6E6E6"
       stroke="#E6E6E6"
       strokeLinecap="round"
-      stroke-linejoin="round"
-      stroke-width="2.083"
+      strokeLinejoin="round"
+      strokeWidth="2.083"
       d="M19.869 11h-14a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2Z"
     />,
     <path
