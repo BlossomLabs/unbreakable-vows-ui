@@ -6,6 +6,7 @@ import {
   Box,
   HStack,
   Button,
+  Flex,
 } from "@chakra-ui/react";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
@@ -66,7 +67,11 @@ function App() {
             </VStack>
           </Box>
           <Box>
-            <Vow isSelected={false}>Employment Agreement</Vow>
+            <Flex flexWrap={"wrap"} gap={3}>
+              <Vow isSelected={false}>Employment Agreement</Vow>
+              <Vow isSelected>Employment Agreement - Selected</Vow>
+              <Vow disabled>Employment Agreement - Disabled</Vow>
+            </Flex>
           </Box>
         </VStack>
         <VStack width={"50%"}>

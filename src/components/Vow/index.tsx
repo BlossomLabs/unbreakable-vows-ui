@@ -17,9 +17,11 @@ import ornamentDivider from "../../assets/ornament-divider.svg";
 export default function Vow({
   children,
   isSelected,
+  disabled,
 }: {
   children: React.ReactNode;
-  isSelected: boolean;
+  isSelected?: boolean;
+  disabled?: boolean;
 }) {
   return (
     <Box
@@ -30,6 +32,23 @@ export default function Vow({
       borderRadius={"xl"}
       backgroundSize={"cover"}
       p={4}
+      _hover={
+        isSelected || disabled
+          ? {}
+          : {
+              border: "2px solid",
+              borderColor: "primary.300",
+              boxShadow: "0px 2px 20px 0px rgba(252, 218, 130, 1)",
+              cursor: "pointer",
+              opacity: 0.8,
+            }
+      }
+      border={isSelected ? "2px solid" : "none"}
+      borderColor={isSelected ? "primary.300" : "transparent"}
+      boxShadow={
+        isSelected ? "0px 2px 20px 0px rgba(252, 218, 130, 1)" : "none"
+      }
+      opacity={disabled ? 0.5 : 1}
     >
       <Flex
         justifyContent={"space-between"}
