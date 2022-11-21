@@ -18,7 +18,9 @@ const md = defineStyle({
 });
 
 const sm = defineStyle({
+  width: "100%",
   fontSize: "xs",
+  lineHeight: "1.059rem",
 });
 
 const Button = defineStyleConfig({
@@ -68,7 +70,7 @@ const Button = defineStyleConfig({
     },
     link: {
       color: "primary.300",
-      bgColor: "none",
+      bgColor: "transparent",
       boxShadow: "none",
       _hover: {
         textDecoration: "none",
