@@ -7,12 +7,16 @@ import {
   HStack,
   Button,
   Flex,
+  useDisclosure,
 } from "@chakra-ui/react";
+import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
 import Vow from "./components/Vow";
 
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const textVariants = [
     ["subtitle1", "md"],
     ["subtitle2", "md"],
@@ -179,8 +183,16 @@ function App() {
               </HStack>
             </VStack>
           </Box>
+          <Button onClick={onOpen}>Open modal</Button>
         </VStack>
       </HStack>
+      <ConfirmationModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title={"Are you sure you want to exit the process?"}
+      >
+        All the information you filled will not be saved
+      </ConfirmationModal>
     </Center>
   );
 }
