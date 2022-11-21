@@ -1,6 +1,7 @@
 import Heading from "./HeadingCustomization";
 import Text from "./TextCustomization";
 import Button from "./ButtonCustomization";
+import Modal from "./ModalCustomization";
 
 const theme = {
   fonts: {
@@ -11,6 +12,7 @@ const theme = {
     Text,
     Heading,
     Button,
+    Modal,
   },
   sizes: {
     "4xs": "10rem",

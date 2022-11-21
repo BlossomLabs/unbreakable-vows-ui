@@ -7,7 +7,7 @@ const xl = defineStyle({
 });
 
 const lg = defineStyle({
-  fontSize: "0.813rem",
+  fontSize: "sm",
   height: "2.313rem",
   width: "7.25rem",
 });
