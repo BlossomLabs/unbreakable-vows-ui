@@ -17,8 +17,10 @@
     "test:stage": "jest --findRelatedTests --passWithNoTests"
   },
   "dependencies": {
+    "@chakra-ui/anatomy": "^2.1.0",
     "@chakra-ui/icons": "^2.0.12",
     "@chakra-ui/react": "^2.4.1",
+    "@chakra-ui/styled-system": "^2.3.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/crimson-pro": "^4.5.10",
