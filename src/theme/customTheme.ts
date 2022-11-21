@@ -24,6 +24,7 @@ const theme = {
     secondary: {
       50: "#F9F9F9", // gris
       400: "rgba(162, 155, 142, 1)", // light beige
+      500: "rgba(57, 40, 33, 1)", // brown
       600: "rgba(59, 66, 74, 1)", // gris claro
       700: "rgba(37, 37, 39, 1)", // dark gray
       800: "rgba(4, 2, 16, 1)", // gris claro
