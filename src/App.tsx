@@ -68,9 +68,15 @@ function App() {
           </Box>
           <Box>
             <Flex flexWrap={"wrap"} gap={3}>
-              <Vow isSelected={false}>Employment Agreement</Vow>
-              <Vow isSelected>Employment Agreement - Selected</Vow>
-              <Vow disabled>Employment Agreement - Disabled</Vow>
+              <Vow isSelected={false} Icon={Illustrations.HatIcon}>
+                Employment Agreement
+              </Vow>
+              <Vow isSelected Icon={Illustrations.OwlIcon}>
+                Employment Agreement - Selected
+              </Vow>
+              <Vow disabled Icon={Illustrations.PotionIcon}>
+                Employment Agreement - Disabled
+              </Vow>
             </Flex>
           </Box>
         </VStack>

@@ -9,7 +9,6 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-import { HatIcon } from "../Illustrations";
 import bg from "../../assets/paper-vow-bg.png";
 import ornament from "../../assets/ornament.svg";
 import ornamentDivider from "../../assets/ornament-divider.svg";
@@ -18,10 +17,12 @@ export default function Vow({
   children,
   isSelected,
   disabled,
+  Icon,
 }: {
   children: React.ReactNode;
   isSelected?: boolean;
   disabled?: boolean;
+  Icon: React.FC<{ boxSize: string }>;
 }) {
   return (
     <Box
@@ -75,7 +76,7 @@ export default function Vow({
         </HStack>
         <Center>
           <VStack spacing={10}>
-            <HatIcon boxSize={"6rem"} />
+            <Icon boxSize={"6rem"} />
             <Heading
               as={"p"}
               variant={"h1"}
