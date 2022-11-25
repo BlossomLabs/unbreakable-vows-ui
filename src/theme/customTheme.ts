@@ -14,6 +14,32 @@ const theme = {
     Button,
     Modal,
   },
+  textStyles: {
+    subtitle1: {
+      fontWeight: "regular",
+      fontSize: "lg",
+    },
+    subtitle2: {
+      fontWeight: "medium",
+      fontSize: "small",
+      color: "primary.300",
+      fontHeight: "120%",
+    },
+    body1: {
+      fontWeight: "regular",
+      fontSize: "md",
+    },
+    body2: {
+      fontWeight: "regular",
+      fontSize: "sm",
+      letterSpacing: "0",
+      lineHeight: "143%",
+    },
+    tooltip: {
+      fontWeight: "medium",
+      fontSize: "0.625rem",
+    },
+  },
   sizes: {
     "4xs": "10rem",
   },

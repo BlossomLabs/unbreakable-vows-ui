@@ -25,7 +25,7 @@ export default function WithSubnavigation() {
         bg={"secondary.700"}
         color={useColorModeValue("gray.600", "white")}
         minH={"5.375rem"}
-        px={{ base: 12 }}
+        px={{ base: 4, md: 12 }}
         align={"center"}
         as={"header"}
       >
@@ -86,7 +86,7 @@ const DesktopNav = () => {
   const linkHoverColor = "primary.300";
 
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} align={"center"}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Link

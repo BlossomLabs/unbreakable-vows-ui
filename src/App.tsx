@@ -18,19 +18,12 @@ import Navbar from "./components/Navbar";
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const textVariants = [
-    ["subtitle1", "md"],
-    ["subtitle2", "md"],
-    ["body1", "md"],
-    ["body2", "sm"],
-    ["tooltip", "xs"],
-  ];
+  const textStyles = ["subtitle1", "subtitle2", "body1", "body2", "tooltip"];
   const headingVariants = [
     ["h1", "2xl"],
     ["h2", "md"],
     ["h3", "md"],
   ];
-
   return (
     <>
       <Navbar />
@@ -45,12 +38,12 @@ function App() {
                 textAlign={"center"}
                 pb={8}
               >
-                Text variants:
+                Text styles:
               </Heading>
               <VStack spacing={8}>
-                {textVariants.map(([v, size], i) => (
-                  <Text variant={v} size={size} key={`${v}-${i}`}>
-                    {v}: Almost before we knew it, we had left the ground.
+                {textStyles.map((s, i) => (
+                  <Text textStyle={s} key={`${s}-${i}`}>
+                    {s}: Almost before we knew it, we had left the ground.
                   </Text>
                 ))}
               </VStack>

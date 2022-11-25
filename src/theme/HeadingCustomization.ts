@@ -3,7 +3,7 @@ import { defineStyleConfig } from "@chakra-ui/react";
 const Heading = defineStyleConfig({
   baseStyle: {
     fontFamily: "heading",
-    lineHeight: 0,
+    lineHeight: "none",
   },
   variants: {
     h1: {
@@ -14,11 +14,12 @@ const Heading = defineStyleConfig({
     },
     h3: {
       fontWeight: "medium",
+      textTransform: "uppercase",
     },
   },
   sizes: {
     md: {
-      fontSize: "18px",
+      fontSize: "1.125rem",
     },
   },
 });

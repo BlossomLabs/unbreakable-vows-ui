@@ -6,7 +6,7 @@ describe("<App />", () => {
   it("should display elements", () => {
     render(<App />);
     expect(
-      screen.getByRole("heading", { name: /text variants/i, level: 1 })
+      screen.getByRole("heading", { name: /text styles/i, level: 1 })
     ).toBeInTheDocument();
   });
 });
