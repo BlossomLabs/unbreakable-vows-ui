@@ -26,8 +26,9 @@ function App() {
   ];
   return (
     <>
-      <Navbar />
-      <Center minH={"100vh"} p={10}>
+      <Navbar isAuthenticated={false} />
+      <Navbar isAuthenticated />
+      <Center minH={"100vh"} p={10} bgColor={"blackAlpha.900"}>
         <HStack>
           <VStack spacing={4} width={"50%"}>
             <Box pb={8}>
@@ -81,13 +82,14 @@ function App() {
             </Box>
           </VStack>
           <VStack width={"50%"}>
-            <Box>
+            <Box bgColor={"white"}>
               <Heading
                 as={"h3"}
                 variant={"h2"}
                 size={"md"}
                 textAlign={"center"}
                 pb={8}
+                color={"secondary.700"}
               >
                 Icons
               </Heading>
@@ -105,7 +107,7 @@ function App() {
                 })}
               </Box>
             </Box>
-            <Box bgColor={"black"} p={8}>
+            <Box p={8}>
               <Heading
                 as={"h4"}
                 variant={"h2"}
@@ -138,7 +140,7 @@ function App() {
               </VStack>
             </Box>
 
-            <Box bgColor={"black"} p={8}>
+            <Box p={8}>
               <Heading
                 as={"h4"}
                 variant={"h2"}

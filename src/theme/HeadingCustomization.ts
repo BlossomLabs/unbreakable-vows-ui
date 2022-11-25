@@ -4,6 +4,7 @@ const Heading = defineStyleConfig({
   baseStyle: {
     fontFamily: "heading",
     lineHeight: "none",
+    color: "white",
   },
   variants: {
     h1: {

@@ -83,6 +83,7 @@ export default function Vow({
               lineHeight={"1.625rem"}
               fontSize={"1.5rem"}
               textAlign={"center"}
+              color={"secondary.500"}
             >
               {children}
             </Heading>

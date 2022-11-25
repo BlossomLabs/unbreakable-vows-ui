@@ -10,13 +10,65 @@ import {
   useColorModeValue,
   useDisclosure,
   Image,
+  Circle,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 import logo from "../../assets/logo.svg";
-import { PlusIcon, CloseIcon } from "../Icons";
+import { PlusIcon, CloseIcon, WalletIcon } from "../Icons";
 
-export default function WithSubnavigation() {
+function ActionBtns({
+  isAuthenticated,
+  balance,
+  profileImage,
+}: {
+  isAuthenticated: boolean;
+  balance: string;
+  profileImage: string;
+}) {
+  return (
+    <Stack
+      flex={{ base: 1, md: 0.2 }}
+      justify={"flex-end"}
+      direction={"row"}
+      spacing={6}
+      alignItems={"center"}
+    >
+      {isAuthenticated ? (
+        <Flex
+          display={{ base: "none", md: "inline-flex" }}
+          alignItems={"center"}
+        >
+          <Text textStyle={"body1"}>$ {balance}</Text>
+          <IconButton
+            aria-label={"Go to wallet"}
+            icon={<WalletIcon />}
+            size={"md"}
+            variant={"link"}
+          />
+          <Link href={"/"} isExternal={false}>
+            <Circle size={"2.5rem"} bgImage={profileImage} bgSize={"cover"} />
+          </Link>
+        </Flex>
+      ) : (
+        <Button
+          display={{ base: "none", md: "inline-flex" }}
+          variant={"solid"}
+          leftIcon={<PlusIcon />}
+          size={"lg"}
+        >
+          Connect
+        </Button>
+      )}
+    </Stack>
+  );
+}
+
+export default function WithSubnavigation({
+  isAuthenticated,
+}: {
+  isAuthenticated: boolean;
+}) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -37,21 +89,11 @@ export default function WithSubnavigation() {
           </Flex>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            variant={"solid"}
-            leftIcon={<PlusIcon />}
-            size={"lg"}
-          >
-            Connect
-          </Button>
-        </Stack>
+        <ActionBtns
+          isAuthenticated={isAuthenticated}
+          balance={"25.00"}
+          profileImage={"https://via.placeholder.com/150"}
+        />
 
         <Flex
           flex={{ base: 1, md: "auto" }}

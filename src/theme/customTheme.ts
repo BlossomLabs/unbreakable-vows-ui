@@ -18,6 +18,7 @@ const theme = {
     subtitle1: {
       fontWeight: "regular",
       fontSize: "lg",
+      color: "white",
     },
     subtitle2: {
       fontWeight: "medium",
@@ -28,16 +29,19 @@ const theme = {
     body1: {
       fontWeight: "regular",
       fontSize: "md",
+      color: "white",
     },
     body2: {
       fontWeight: "regular",
       fontSize: "sm",
       letterSpacing: "0",
       lineHeight: "143%",
+      color: "white",
     },
     tooltip: {
       fontWeight: "medium",
       fontSize: "0.625rem",
+      color: "white",
     },
   },
   sizes: {
