@@ -14,6 +14,7 @@ import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
 import Vow from "./components/Vow";
 import Navbar from "./components/Navbar";
+import History from "./components/History";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -81,6 +82,7 @@ function App() {
               </Flex>
             </Box>
           </VStack>
+
           <VStack width={"50%"}>
             <Box bgColor={"white"}>
               <Heading
@@ -107,6 +109,7 @@ function App() {
                 })}
               </Box>
             </Box>
+
             <Box p={8}>
               <Heading
                 as={"h4"}
@@ -179,6 +182,30 @@ function App() {
               </VStack>
             </Box>
             <Button onClick={onOpen}>Open modal</Button>
+            <History
+              items={[
+                {
+                  title: "Susan and Smith signed",
+                  timestamp: "2022-11-25T20:49:07.213Z",
+                  suggestions: [
+                    "Deleted sentence at section 2",
+                    "Edited section 3, párrafo 2",
+                  ],
+                  onAccept: () => alert("accepted"),
+                  onReject: () => alert("rejected"),
+                },
+                {
+                  title: "Viviane and David signed",
+                  timestamp: "2022-11-27T15:59:50.973Z",
+                  suggestions: [
+                    "Added sentence at section 1",
+                    "Edited section 5, párrafo 10",
+                  ],
+                  onAccept: () => alert("accepted"),
+                  onReject: () => alert("rejected"),
+                },
+              ]}
+            />
           </VStack>
         </HStack>
         <ConfirmationModal
