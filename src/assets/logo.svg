@@ -258,10 +258,10 @@
       height="38.797"
       x="4.292"
       y="-1.536"
-      color-interpolation-filters="sRGB"
+      colorInterpolationFilters="sRGB"
       filterUnits="userSpaceOnUse"
     >
-      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feFlood floodOpacity="0" result="BackgroundImageFix" />
       <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
       <feGaussianBlur
         result="effect1_foregroundBlur_635_3736"

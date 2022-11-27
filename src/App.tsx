@@ -12,6 +12,7 @@ import {
 import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
+import * as Stamps from "./components/Stamps";
 import Vow from "./components/Vow";
 import Navbar from "./components/Navbar";
 import History from "./components/History";
@@ -206,6 +207,19 @@ function App() {
                 },
               ]}
             />
+            <Box bgColor={"white"}>
+              <Heading as={"h4"} variant={"h2"}>
+                Stamps
+              </Heading>
+              <Stamps.TracedLeaves boxSize={"3rem"} />
+              <Stamps.TracedStamp boxSize={"3rem"} />
+              <Stamps.RedFlower boxSize={"3rem"} />
+              <Stamps.RedGiveth boxSize={"3rem"} />
+              <Stamps.RedMoney boxSize={"3rem"} />
+              <Stamps.RedStamp boxSize={"3rem"} />
+              <Stamps.GoldenLeaves boxSize={"3rem"} />
+              <Stamps.GoldenStamp boxSize={"3rem"} />
+            </Box>
           </VStack>
         </HStack>
         <ConfirmationModal

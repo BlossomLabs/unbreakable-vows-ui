@@ -104,8 +104,8 @@ function HistoryItem({
           </Box>
           <Collapse in={isOpen}>
             <UnorderedList pt={4}>
-              {suggestions.map((s) => (
-                <ListItem>{s}</ListItem>
+              {suggestions.map((s, i) => (
+                <ListItem key={`history-item-suggestions-${i}`}>{s}</ListItem>
               ))}
             </UnorderedList>
             <Flex mt={6} gap={3}>
@@ -134,8 +134,8 @@ function HistoryItem({
 export default function History({ items }: HistoryPropsType) {
   return (
     <Box as="section">
-      {items.map((item) => {
-        return <HistoryItem {...item} />;
+      {items.map((item, i) => {
+        return <HistoryItem {...item} key={`history-item-${i}`} />;
       })}
     </Box>
   );
