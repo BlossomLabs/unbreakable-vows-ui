@@ -1,10 +1,8 @@
 import { createIcon } from "@chakra-ui/icons";
 
-// using `path`
-const FeatherIcon = createIcon({
-  displayName: "FeatherIcon",
+const Feather = createIcon({
+  displayName: "Feather",
   viewBox: "0 0 160 160",
-  // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: [
     <path
       fill="#040210"
@@ -19,4 +17,4 @@ const FeatherIcon = createIcon({
   ],
 });
 
-export default FeatherIcon;
+export default Feather;

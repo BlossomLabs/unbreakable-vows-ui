@@ -1,7 +1,7 @@
 import { createIcon } from "@chakra-ui/icons";
 
-const OrnamentIcon = createIcon({
-  displayName: "OrnamentIcon",
+const Ornament = createIcon({
+  displayName: "Ornament",
   viewBox: "0 0 21 8",
   path: (
     <path
@@ -13,4 +13,4 @@ const OrnamentIcon = createIcon({
   ),
 });
 
-export default OrnamentIcon;
+export default Ornament;

@@ -1,8 +1,8 @@
 import { createIcon } from "@chakra-ui/icons";
 
 // using `path`
-const HatIcon = createIcon({
-  displayName: "HatIcon",
+const Hat = createIcon({
+  displayName: "Hat",
   viewBox: "0 0 144 150",
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: (
@@ -13,4 +13,4 @@ const HatIcon = createIcon({
   ),
 });
 
-export default HatIcon;
+export default Hat;

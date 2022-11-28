@@ -22,7 +22,7 @@ const theme = {
     },
     subtitle2: {
       fontWeight: "medium",
-      fontSize: "small",
+      fontSize: "sm",
       color: "primary.300",
       fontHeight: "120%",
     },

@@ -1,8 +1,8 @@
 import { createIcon } from "@chakra-ui/icons";
 
 // using `path`
-const PotionIcon = createIcon({
-  displayName: "PotionIcon",
+const Potion = createIcon({
+  displayName: "Potion",
   viewBox: "0 0 160 160",
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: [
@@ -19,4 +19,4 @@ const PotionIcon = createIcon({
   ],
 });
 
-export default PotionIcon;
+export default Potion;

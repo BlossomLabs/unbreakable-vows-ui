@@ -71,13 +71,13 @@ function App() {
             </Box>
             <Box>
               <Flex flexWrap={"wrap"} gap={3}>
-                <NewVow isSelected={false} Icon={Illustrations.HatIcon}>
+                <NewVow isSelected={false} Icon={Illustrations.Hat}>
                   Employment Agreement
                 </NewVow>
-                <NewVow isSelected Icon={Illustrations.OwlIcon}>
+                <NewVow isSelected Icon={Illustrations.Owl}>
                   Employment Agreement - Selected
                 </NewVow>
-                <NewVow disabled Icon={Illustrations.PotionIcon}>
+                <NewVow disabled Icon={Illustrations.Potion}>
                   Employment Agreement - Disabled
                 </NewVow>
               </Flex>
@@ -97,10 +97,10 @@ function App() {
                 Icons
               </Heading>
               <Box>
-                <Illustrations.HatIcon boxSize={"4xs"} />
-                <Illustrations.FeatherIcon boxSize={"4xs"} />
-                <Illustrations.PotionIcon boxSize={"4xs"} />
-                <Illustrations.OwlIcon boxSize={"4xs"} />
+                <Illustrations.Hat boxSize={"4xs"} />
+                <Illustrations.Feather boxSize={"4xs"} />
+                <Illustrations.Potion boxSize={"4xs"} />
+                <Illustrations.Owl boxSize={"4xs"} />
               </Box>
               <Box>
                 {Object.keys(Icons).map((IconName, i) => {

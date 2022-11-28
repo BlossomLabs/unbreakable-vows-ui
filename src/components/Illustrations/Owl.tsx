@@ -1,8 +1,8 @@
 import { createIcon } from "@chakra-ui/icons";
 
 // using `path`
-const OwlIcon = createIcon({
-  displayName: "OwlIcon",
+const Owl = createIcon({
+  displayName: "Owl",
   viewBox: "0 0 160 160",
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: [
@@ -17,4 +17,4 @@ const OwlIcon = createIcon({
   ],
 });
 
-export default OwlIcon;
+export default Owl;
