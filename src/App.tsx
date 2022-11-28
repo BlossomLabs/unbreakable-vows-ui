@@ -1,13 +1,13 @@
 import {
   VStack,
   Text,
-  Center,
   Heading,
   Box,
   HStack,
   Button,
   Flex,
   useDisclosure,
+  Stack,
 } from "@chakra-ui/react";
 import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
@@ -30,9 +30,9 @@ function App() {
     <>
       <Navbar isAuthenticated={false} />
       <Navbar isAuthenticated />
-      <Center minH={"100vh"} p={10} bgColor={"blackAlpha.900"}>
-        <HStack>
-          <VStack spacing={4} width={"50%"}>
+      <Box minH={"100vh"} minW={"100vw"} p={10} bgColor={"blackAlpha.900"}>
+        <Stack direction={{ base: "column", lg: "row" }}>
+          <VStack spacing={4} width={{ base: "100%", lg: "50%" }}>
             <Box pb={8}>
               <Heading
                 as={"h1"}
@@ -84,7 +84,7 @@ function App() {
             </Box>
           </VStack>
 
-          <VStack width={"50%"}>
+          <VStack width={{ base: "100%", lg: "50%" }}>
             <Box bgColor={"white"}>
               <Heading
                 as={"h3"}
@@ -221,7 +221,7 @@ function App() {
               <Stamps.GoldenStamp boxSize={"3rem"} />
             </Box>
           </VStack>
-        </HStack>
+        </Stack>
         <ConfirmationModal
           isOpen={isOpen}
           onClose={onClose}
@@ -229,7 +229,7 @@ function App() {
         >
           All the information you filled will not be saved
         </ConfirmationModal>
-      </Center>
+      </Box>
     </>
   );
 }
