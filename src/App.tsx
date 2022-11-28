@@ -208,7 +208,7 @@ function App() {
               ]}
             />
             <Box bgColor={"white"}>
-              <Heading as={"h4"} variant={"h2"}>
+              <Heading as={"h4"} variant={"h2"} color={"secondary.700"}>
                 Stamps
               </Heading>
               <Stamps.TracedLeaves boxSize={"3rem"} />

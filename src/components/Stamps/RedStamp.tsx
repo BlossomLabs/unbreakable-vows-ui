@@ -6,12 +6,12 @@ const RedStamp = createIcon({
   viewBox: "0 0 52 52",
   // path can also be an array of elements, if you have multiple paths, lines, shapes, etc.
   path: [
-    <g filter="url(#a)">
-      <path fill="url(#b)" d="M0 0h52v52H0z" />
+    <g filter="url(#red-stamp-a)">
+      <path fill="url(#red-stamp-b)" d="M0 0h52v52H0z" />
     </g>,
     <defs>
       <pattern
-        id="b"
+        id="red-stamp-b"
         width="1"
         height="1"
         patternContentUnits="objectBoundingBox"
@@ -19,7 +19,7 @@ const RedStamp = createIcon({
         <use xlinkHref="#c" transform="scale(.00087)" />
       </pattern>
       <filter
-        id="a"
+        id="red-stamp-a"
         width="53"
         height="53"
         x="-1"
