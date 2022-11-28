@@ -13,7 +13,7 @@ import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
 import * as Stamps from "./components/Stamps";
-import Vow from "./components/Vow";
+import NewVow from "./components/NewVow";
 import Navbar from "./components/Navbar";
 import History from "./components/History";
 
@@ -71,15 +71,15 @@ function App() {
             </Box>
             <Box>
               <Flex flexWrap={"wrap"} gap={3}>
-                <Vow isSelected={false} Icon={Illustrations.HatIcon}>
+                <NewVow isSelected={false} Icon={Illustrations.HatIcon}>
                   Employment Agreement
-                </Vow>
-                <Vow isSelected Icon={Illustrations.OwlIcon}>
+                </NewVow>
+                <NewVow isSelected Icon={Illustrations.OwlIcon}>
                   Employment Agreement - Selected
-                </Vow>
-                <Vow disabled Icon={Illustrations.PotionIcon}>
+                </NewVow>
+                <NewVow disabled Icon={Illustrations.PotionIcon}>
                   Employment Agreement - Disabled
-                </Vow>
+                </NewVow>
               </Flex>
             </Box>
           </VStack>
