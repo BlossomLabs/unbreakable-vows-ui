@@ -8,6 +8,7 @@ import {
   Flex,
   useDisclosure,
   Stack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
@@ -16,6 +17,7 @@ import * as Stamps from "./components/Stamps";
 import NewVow from "./components/NewVow";
 import Navbar from "./components/Navbar";
 import History from "./components/History";
+import CreatedVow from "./components/CreatedVow";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -82,6 +84,31 @@ function App() {
                 </NewVow>
               </Flex>
             </Box>
+            <SimpleGrid
+              w={"full"}
+              spacing={4}
+              templateColumns="repeat(auto-fill, 200px)"
+              templateRows={"300px"}
+            >
+              <CreatedVow
+                timestamp="2022-11-28T14:20:40.852Z"
+                title="Independent contractor Agreement"
+                type="draft"
+              />
+              <CreatedVow
+                timestamp="2022-11-28T15:24:59.412Z"
+                title="Independent contractor Agreement"
+                type="terminated"
+                isBookmark
+                isBlocked
+              />
+              <CreatedVow
+                timestamp="2022-11-28T15:24:59.412Z"
+                title="Independent contractor Agreement"
+                type="private"
+                isBroken
+              />
+            </SimpleGrid>
           </VStack>
 
           <VStack width={{ base: "100%", lg: "50%" }}>

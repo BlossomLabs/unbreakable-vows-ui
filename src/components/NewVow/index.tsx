@@ -80,8 +80,8 @@ export default function Vow({
             <Heading
               as={"p"}
               variant={"h1"}
-              lineHeight={"1.625rem"}
-              fontSize={"1.5rem"}
+              lineHeight={"110%"}
+              fontSize={"2xl"}
               textAlign={"center"}
               color={"secondary.500"}
             >
