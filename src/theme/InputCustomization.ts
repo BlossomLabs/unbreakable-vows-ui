@@ -4,7 +4,7 @@ import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(inputAnatomy.keys);
 
-const filled = definePartsStyle({
+const variantFilled = {
   field: {
     color: "white",
     borderRadius: "base",
@@ -27,11 +27,26 @@ const filled = definePartsStyle({
       bgColor: "secondary.600",
     },
   },
-});
+};
+
+const variantSearch = {
+  field: {
+    ...variantFilled.field,
+    borderRadius: "full",
+    border: "1px solid",
+    borderColor: "primary.300",
+  },
+  element: {
+    borderRadius: "full",
+    color: "primary.300",
+    bgColor: "secondary.600",
+  },
+};
 
 const inputTheme = defineMultiStyleConfig({
   variants: {
-    filled,
+    filled: definePartsStyle(variantFilled),
+    search: definePartsStyle(variantSearch),
   },
   defaultProps: {
     variant: "filled",

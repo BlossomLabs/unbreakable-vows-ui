@@ -5,6 +5,8 @@ import {
   FormErrorMessage,
   FormHelperText,
   Input,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
 
 interface Props {
@@ -15,9 +17,16 @@ interface Props {
   disabled?: boolean;
   placeholder?: string;
   isRequired?: boolean;
+  variant?: "filled" | "search";
+  RightElementChildren?: React.ReactNode;
 }
 
-export default function InputField({ label, helperText, ...props }: Props) {
+export default function InputField({
+  label,
+  helperText,
+  RightElementChildren,
+  ...props
+}: Props) {
   const [field, meta] = useField(props);
 
   return (
@@ -27,7 +36,12 @@ export default function InputField({ label, helperText, ...props }: Props) {
       isRequired={props.isRequired}
     >
       <FormLabel color={"primary.300"}>{label}</FormLabel>
-      <Input {...field} {...props} />
+      <InputGroup>
+        <Input {...field} {...props} />
+        {RightElementChildren ? (
+          <InputRightElement children={RightElementChildren} />
+        ) : null}
+      </InputGroup>
       <FormErrorMessage>{meta.error}</FormErrorMessage>
       {helperText ? <FormHelperText>{helperText}</FormHelperText> : null}
     </FormControl>

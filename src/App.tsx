@@ -1,3 +1,4 @@
+import { Form, Formik, type FormikProps, type FormikHelpers } from "formik";
 import {
   VStack,
   Text,
@@ -9,8 +10,9 @@ import {
   useDisclosure,
   Stack,
   SimpleGrid,
+  IconButton,
 } from "@chakra-ui/react";
-import { Form, Formik, type FormikProps, type FormikHelpers } from "formik";
+import { Search2Icon } from "@chakra-ui/icons";
 import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
@@ -25,6 +27,7 @@ interface Values {
   firstName: string;
   lastName: string;
   email: string;
+  search: string;
 }
 
 type ErrorObj = {
@@ -52,6 +55,7 @@ function FormExample() {
           email: "",
           firstName: "red",
           lastName: "",
+          search: "term",
         }}
         onSubmit={(values: Values, actions: FormikHelpers<Values>) => {
           setTimeout(() => {
@@ -81,6 +85,22 @@ function FormExample() {
               type="email"
               label="Email"
               placeholder={"Your email address"}
+            />
+            <Input
+              RightElementChildren={
+                <IconButton
+                  icon={
+                    <Search2Icon color={"primary.300"} boxSize={"0.85rem"} />
+                  }
+                  aria-label={"Search"}
+                  variant={"link"}
+                  size={"sm"}
+                />
+              }
+              type={"text"}
+              name={"search"}
+              placeholder={"Search..."}
+              variant={"search"}
             />
             <Button type="submit">Submit</Button>
           </Form>
