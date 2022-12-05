@@ -10,6 +10,7 @@ import {
   Stack,
   SimpleGrid,
 } from "@chakra-ui/react";
+import { Form, Formik, type FormikProps, type FormikHelpers } from "formik";
 import ConfirmationModal from "./components/ConfirmationModal";
 import * as Icons from "./components/Icons";
 import * as Illustrations from "./components/Illustrations";
@@ -18,6 +19,76 @@ import NewVow from "./components/NewVow";
 import Navbar from "./components/Navbar";
 import History from "./components/History";
 import CreatedVow from "./components/CreatedVow";
+import Input from "./components/InputField";
+
+interface Values {
+  firstName: string;
+  lastName: string;
+  email: string;
+}
+
+type ErrorObj = {
+  email?: string;
+};
+
+const validate = (values: Values) => {
+  const errors: ErrorObj = {};
+
+  if (!values.email) {
+    errors.email = "Required";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Invalid email address";
+  }
+
+  return errors;
+};
+
+function FormExample() {
+  return (
+    <Box>
+      <Heading>My Form</Heading>
+      <Formik
+        initialValues={{
+          email: "",
+          firstName: "red",
+          lastName: "",
+        }}
+        onSubmit={(values: Values, actions: FormikHelpers<Values>) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+
+            actions.setSubmitting(false);
+          }, 1000);
+        }}
+        validate={validate}
+      >
+        {(props: FormikProps<Values>) => (
+          <Form>
+            <Input
+              name="firstName"
+              type="text"
+              label="First Name"
+              helperText={"Enter here your first name"}
+            />
+            <Input
+              name="lastName"
+              type="text"
+              label="Last Name"
+              disabled={true}
+            />
+            <Input
+              name="email"
+              type="email"
+              label="Email"
+              placeholder={"Your email address"}
+            />
+            <Button type="submit">Submit</Button>
+          </Form>
+        )}
+      </Formik>
+    </Box>
+  );
+}
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -256,6 +327,9 @@ function App() {
         >
           All the information you filled will not be saved
         </ConfirmationModal>
+      </Box>
+      <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"white"}>
+        <FormExample />
       </Box>
     </>
   );

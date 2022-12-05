@@ -2,6 +2,7 @@ import Heading from "./HeadingCustomization";
 import Text from "./TextCustomization";
 import Button from "./ButtonCustomization";
 import Modal from "./ModalCustomization";
+import Input from "./InputCustomization";
 
 const theme = {
   fonts: {
@@ -13,6 +14,7 @@ const theme = {
     Heading,
     Button,
     Modal,
+    Input,
   },
   textStyles: {
     subtitle1: {
