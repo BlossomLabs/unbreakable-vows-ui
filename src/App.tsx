@@ -22,6 +22,7 @@ import Navbar from "./components/Navbar";
 import History from "./components/History";
 import CreatedVow from "./components/CreatedVow";
 import Input from "./components/InputField";
+import Select from "./components/SelectField";
 
 interface Values {
   firstName: string;
@@ -101,6 +102,18 @@ function FormExample() {
               name={"search"}
               placeholder={"Search..."}
               variant={"search"}
+            />
+            <Select
+              name={"state"}
+              options={[
+                { label: "Draft", value: "draft" },
+                { label: "Unsigned", value: "unsigned" },
+                { label: "Active", value: "active" },
+                { label: "Terminating", value: "terminating" },
+                { label: "Terminated", value: "terminated" },
+                { label: "Disputing", value: "disputing" },
+              ]}
+              isMulti
             />
             <Button type="submit">Submit</Button>
           </Form>
