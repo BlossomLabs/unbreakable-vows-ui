@@ -93,6 +93,10 @@ export default function SelectField({
       color: chakraTheme.colors.primary["300"],
       transform: `rotate(${isFocused ? -180 : 0}deg)`,
     }),
+    clearIndicator: (styles) => ({
+      ...styles,
+      color: chakraTheme.colors.primary["300"],
+    }),
   };
 
   return (
