@@ -9,22 +9,22 @@ const variantFilled = {
     color: "white",
     borderRadius: "base",
     borderColor: "transparent",
-    bgColor: "secondary.600",
+    bgColor: "secondary.800",
     _placeholder: {
       opacity: 0.5,
     },
     _focus: {
       border: "1px solid",
       borderColor: "primary.300",
-      bgColor: "secondary.600",
+      bgColor: "secondary.800",
     },
     _hover: {
-      bgColor: "secondary.600",
+      bgColor: "secondary.800",
     },
     _disabled: {
       opacity: 0.9,
       color: "rgba(255, 255, 255, 0.12)",
-      bgColor: "secondary.600",
+      bgColor: "secondary.800",
     },
   },
 };
