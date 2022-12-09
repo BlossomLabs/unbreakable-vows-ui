@@ -3,6 +3,7 @@ import Text from "./TextCustomization";
 import Button from "./ButtonCustomization";
 import Modal from "./ModalCustomization";
 import Input from "./InputCustomization";
+import Checkbox from "./CheckboxCustomization";
 
 const theme = {
   fonts: {
@@ -15,6 +16,7 @@ const theme = {
     Button,
     Modal,
     Input,
+    Checkbox,
   },
   textStyles: {
     subtitle1: {
@@ -50,6 +52,9 @@ const theme = {
     "4xs": "10rem",
   },
   colors: {
+    checkbox: {
+      500: "rgba(252, 218, 130, 1)",
+    },
     primary: {
       300: "rgba(252, 218, 130, 1)", // gold
       400: "rgba(221, 198, 146, 1)", // gold light

@@ -90,7 +90,10 @@ export default function SelectField({
         }}
       >
         {value === "all" ? null : (
-          <Checkbox isChecked={handleIsChecked(value)} />
+          <Checkbox
+            isChecked={handleIsChecked(value)}
+            colorScheme={"checkbox"}
+          />
         )}
         {icon ? <>{icon}</> : null}
         {children}
