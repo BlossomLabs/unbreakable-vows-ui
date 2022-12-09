@@ -1,13 +1,14 @@
+import { CSSProperties } from "react";
 import { useField } from "formik";
 import {
   FormControl,
   FormLabel,
   FormErrorMessage,
   FormHelperText,
+  Checkbox,
 } from "@chakra-ui/react";
-import Select, { StylesConfig } from "react-select";
-// import { ChevronDownIcon } from "../Icons";
-import chakraTheme from "../../theme/customTheme";
+import Select, { OptionProps } from "react-select";
+import styles from "./styles";
 
 type Option = {
   value: string | number;
@@ -49,54 +50,50 @@ export default function SelectField({
         (option: Option) => option.value === "all"
       );
       return selectedAllOption
-        ? setValue(options.slice(1))
+        ? setValue(newOptions.slice(1))
         : setValue(selected);
     }
 
     setValue(selected);
   }
 
-  const colourStyles: StylesConfig<Option> = {
-    valueContainer: (styles, { isDisabled }) => ({
-      ...styles,
-      backgroundColor: isDisabled
-        ? chakraTheme.colors.secondary["600"]
-        : chakraTheme.colors.secondary["800"],
-    }),
-    menuList: (styles) => ({
-      ...styles,
-      backgroundColor: chakraTheme.colors.secondary["800"],
-    }),
-    option: (styles, { isDisabled, isFocused }) => {
-      return {
-        ...styles,
-        color: "white",
-        cursor: isDisabled ? "not-allowed" : "default",
-        borderBottom: "1px solid",
-        borderColor: "rgba(255, 255, 255, 0.15)",
-        paddingTop: "12px",
-        paddingBottom: "12px",
-        backgroundColor: isFocused
-          ? chakraTheme.colors.secondary["600"]
-          : chakraTheme.colors.secondary["800"],
-      };
-    },
-    placeholder: (styles) => ({ ...styles, opacity: 0.5 }),
-    indicatorsContainer: (styles, { isDisabled }) => ({
-      ...styles,
-      backgroundColor: isDisabled
-        ? chakraTheme.colors.secondary["600"]
-        : chakraTheme.colors.secondary["800"],
-    }),
-    dropdownIndicator: (styles, { isFocused }) => ({
-      ...styles,
-      color: chakraTheme.colors.primary["300"],
-      transform: `rotate(${isFocused ? -180 : 0}deg)`,
-    }),
-    clearIndicator: (styles) => ({
-      ...styles,
-      color: chakraTheme.colors.primary["300"],
-    }),
+  function handleIsChecked(optionValue: string) {
+    if (isMulti && field.value && field.value.length) {
+      const correspondingValue = field.value.find(
+        ({ value: fieldValue }: any) => fieldValue === optionValue
+      );
+      return Boolean(correspondingValue);
+    }
+
+    return field.value && field.value.value === optionValue;
+  }
+
+  const CustomOption = (props: OptionProps<Option>) => {
+    const {
+      getStyles,
+      isDisabled,
+      children,
+      innerProps: { ref, ...restInnerProps },
+      value,
+    } = props as OptionProps<Option> & { value: string };
+
+    return !isDisabled ? (
+      <div
+        {...restInnerProps}
+        ref={ref}
+        style={{
+          ...(getStyles("option", props) as CSSProperties),
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+        }}
+      >
+        {value === "all" ? null : (
+          <Checkbox isChecked={handleIsChecked(value)} />
+        )}
+        {children}
+      </div>
+    ) : null;
   };
 
   return (
@@ -112,7 +109,9 @@ export default function SelectField({
         placeholder={placeholder}
         onChange={handleChange}
         isMulti={isMulti}
-        styles={colourStyles}
+        styles={styles}
+        components={{ Option: CustomOption }}
+        hideSelectedOptions={false}
       />
       <FormErrorMessage>{meta.error}</FormErrorMessage>
       {helperText ? <FormHelperText>{helperText}</FormHelperText> : null}
