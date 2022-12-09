@@ -106,7 +106,11 @@ function FormExample() {
             <Select
               name={"state"}
               options={[
-                { label: "Draft", value: "draft" },
+                {
+                  label: "Draft",
+                  value: "draft",
+                  icon: <Stamps.RedGiveth boxSize={8} />,
+                },
                 { label: "Unsigned", value: "unsigned" },
                 { label: "Active", value: "active" },
                 { label: "Terminating", value: "terminating" },

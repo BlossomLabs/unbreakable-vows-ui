@@ -13,6 +13,7 @@ import styles from "./styles";
 type Option = {
   value: string | number;
   label: string;
+  icon?: React.ReactNode;
 };
 
 interface Props {
@@ -57,7 +58,7 @@ export default function SelectField({
     setValue(selected);
   }
 
-  function handleIsChecked(optionValue: string) {
+  function handleIsChecked(optionValue: string | number) {
     if (isMulti && field.value && field.value.length) {
       const correspondingValue = field.value.find(
         ({ value: fieldValue }: any) => fieldValue === optionValue
@@ -74,8 +75,8 @@ export default function SelectField({
       isDisabled,
       children,
       innerProps: { ref, ...restInnerProps },
-      value,
-    } = props as OptionProps<Option> & { value: string };
+      data: { value, icon },
+    } = props as OptionProps<Option>;
 
     return !isDisabled ? (
       <div
@@ -91,6 +92,7 @@ export default function SelectField({
         {value === "all" ? null : (
           <Checkbox isChecked={handleIsChecked(value)} />
         )}
+        {icon ? <>{icon}</> : null}
         {children}
       </div>
     ) : null;
