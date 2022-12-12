@@ -23,6 +23,7 @@ import History from "./components/History";
 import CreatedVow from "./components/CreatedVow";
 import Input from "./components/InputField";
 import Select from "./components/SelectField";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 interface Values {
   firstName: string;
@@ -355,6 +356,36 @@ function App() {
               <Stamps.GoldenLeaves boxSize={"3rem"} />
               <Stamps.GoldenStamp boxSize={"3rem"} />
             </Box>
+
+            <Breadcrumbs
+              items={[
+                {
+                  label: "Basic information",
+                  href: "/basic-info",
+                  isComplete: true,
+                },
+                {
+                  label: "Compensation and benefits",
+                  href: "/compensation",
+                  isComplete: false,
+                },
+                {
+                  label: "Governing law",
+                  href: "/governing-law",
+                  isComplete: false,
+                },
+                {
+                  label: "Governing law 2",
+                  href: "/governing-law",
+                  isComplete: false,
+                },
+                {
+                  label: "Governing law 3",
+                  href: "/governing-law",
+                  isComplete: false,
+                },
+              ]}
+            />
           </VStack>
         </Stack>
         <ConfirmationModal
