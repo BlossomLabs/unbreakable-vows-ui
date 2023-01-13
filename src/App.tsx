@@ -401,7 +401,7 @@ function App() {
         <FormExample />
       </Box>
       <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"secondary.800"}>
-        <Contract />
+        <Contract contractName={"Employment Agreement"} />
       </Box>
     </>
   );
