@@ -24,6 +24,7 @@ import CreatedVow from "./components/CreatedVow";
 import Input from "./components/InputField";
 import Select from "./components/SelectField";
 import Breadcrumbs from "./components/Breadcrumbs";
+import Contract from "./components/Contract";
 
 interface Values {
   firstName: string;
@@ -398,6 +399,9 @@ function App() {
       </Box>
       <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"white"}>
         <FormExample />
+      </Box>
+      <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"secondary.800"}>
+        <Contract />
       </Box>
     </>
   );
