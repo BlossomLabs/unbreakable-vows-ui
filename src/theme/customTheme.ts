@@ -4,6 +4,7 @@ import Button from "./ButtonCustomization";
 import Modal from "./ModalCustomization";
 import Input from "./InputCustomization";
 import Checkbox from "./CheckboxCustomization";
+import Card from "./CardCustomization";
 
 const theme = {
   fonts: {
@@ -17,6 +18,7 @@ const theme = {
     Modal,
     Input,
     Checkbox,
+    Card,
   },
   textStyles: {
     subtitle1: {
