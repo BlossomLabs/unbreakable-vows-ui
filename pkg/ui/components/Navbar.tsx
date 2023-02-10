@@ -14,8 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-import logo from "../../assets/logo.svg";
-import { PlusIcon, CloseIcon, WalletIcon } from "../Icons";
+import logo from "../assets/logo.svg";
+import { PlusIcon, CloseIcon, WalletIcon } from "./Icons";
 
 function ActionBtns({
   isAuthenticated,
