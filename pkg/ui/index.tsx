@@ -12,6 +12,7 @@ export * as Illustrations from "./components/Illustrations";
 export * as Stamps from "./components/Stamps";
 
 export { default as Navbar } from './components/Navbar'
+export { default as History } from './components/History'
 export { default as Breadcrumbs } from './components/Breadcrumbs'
 export { default as ConfirmationModal } from './components/ConfirmationModal'
 export { default as Input } from './components/InputField'
