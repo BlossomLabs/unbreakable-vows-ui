@@ -1,4 +1,5 @@
 import { Button, Heading, Box, Illustrations, Icons, Stamps } from "ui";
+import { Form } from "../components";
 
 export default function Docs() {
   return (
@@ -44,6 +45,7 @@ export default function Docs() {
         <Stamps.GoldenLeaves boxSize={"3rem"} />
         <Stamps.GoldenStamp boxSize={"3rem"} />
       </Box>
+      <Form />
     </div>
   );
 }

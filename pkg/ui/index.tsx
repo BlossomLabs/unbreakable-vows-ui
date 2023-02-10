@@ -1,6 +1,11 @@
 export * from '@chakra-ui/react'
 export * as ChakraIcons from "@chakra-ui/icons";
-export * from 'formik'
+export { 
+	Form as FormikForm, 
+	Formik, 
+	type FormikProps, 
+	type FormikHelpers 
+} from "formik";
 
 export * as Icons from "./components/Icons";
 export * as Illustrations from "./components/Illustrations";
