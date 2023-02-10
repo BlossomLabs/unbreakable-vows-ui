@@ -8,7 +8,8 @@ import {
   Stack, 
   VStack, 
   HStack, 
-  Text 
+  Text,
+  Navbar
 } from "ui";
 import { Form } from "../components";
 
@@ -22,6 +23,8 @@ export default function Docs() {
 
   return (
     <>
+    <Navbar isAuthenticated={false} />
+    <Navbar isAuthenticated />
       <Box minH={"100vh"} minW={"100vw"} p={10} bgColor={"blackAlpha.900"}>
         <Heading>Docs</Heading>
           <Stack direction={{ base: "column", lg: "row" }}>
