@@ -118,6 +118,8 @@ importers:
       '@chakra-ui/react': ^2.4.9
       '@emotion/react': ^11.10.5
       '@emotion/styled': ^11.10.5
+      '@fontsource/crimson-pro': ^4.5.11
+      '@fontsource/inter': ^4.5.15
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       eslint: ^7.32.0
@@ -130,6 +132,8 @@ importers:
       '@chakra-ui/react': 2.4.9_kpzhocgnhcc3ibwecb5sm5kbea
       '@emotion/react': 11.10.5_kzbn2opkn2327fwg5yzwzya5o4
       '@emotion/styled': 11.10.5_qvatmowesywn4ye42qoh247szu
+      '@fontsource/crimson-pro': 4.5.11
+      '@fontsource/inter': 4.5.15
       framer-motion: 9.0.2_react@18.2.0
     devDependencies:
       '@types/react': 18.0.26
@@ -1967,6 +1971,14 @@ packages:
       graphql: 16.6.0
       graphql-import-node: 0.0.5_graphql@16.6.0
       js-yaml: 4.1.0
+    dev: false
+
+  /@fontsource/crimson-pro/4.5.11:
+    resolution: {integrity: sha512-AQcsh0g6Tmh708JJYDmxV8itXu+k6ZFokETxJAxJVg0rj9Dz3p9QZWUqqWNfrjChJDL86yBDKyV3sB2BjW1XFg==}
+    dev: false
+
+  /@fontsource/inter/4.5.15:
+    resolution: {integrity: sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==}
     dev: false
 
   /@graphprotocol/graph-cli/0.37.2:
