@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import NextHead from "next/head";
 import * as React from "react";
 import { WagmiConfig } from "wagmi";
-
+import { ThemeProvider } from 'ui'
 import { chains, client } from "../wagmi";
 
 function App({ Component, pageProps }: AppProps) {
@@ -13,11 +13,13 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={client}>
       <RainbowKitProvider chains={chains}>
-        <NextHead>
-          <title>My App</title>
-        </NextHead>
+        <ThemeProvider>
+          <NextHead>
+            <title>My App</title>
+          </NextHead>
 
-        {mounted && <Component {...pageProps} />}
+          {mounted && <Component {...pageProps} />}
+        </ThemeProvider>
       </RainbowKitProvider>
     </WagmiConfig>
   );
