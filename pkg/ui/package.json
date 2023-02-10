@@ -22,8 +22,6 @@
     "@chakra-ui/styled-system": "^2.5.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@fontsource/crimson-pro": "^4.5.11",
-    "@fontsource/inter": "^4.5.15",
     "framer-motion": "^9.0.2"
   }
 }
