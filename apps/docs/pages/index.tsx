@@ -1,4 +1,4 @@
-import { Button, Heading, Box, Illustrations, Icons } from "ui";
+import { Button, Heading, Box, Illustrations, Icons, Stamps } from "ui";
 
 export default function Docs() {
   return (
@@ -30,6 +30,19 @@ export default function Docs() {
             return <Icon key={`${IconName}-${i}`} boxSize={8} />;
           })}
         </Box>
+      </Box>
+      <Box bgColor={"white"}>
+        <Heading as={"h4"} variant={"h2"} color={"secondary.700"}>
+          Stamps
+        </Heading>
+        <Stamps.TracedLeaves boxSize={"3rem"} />
+        <Stamps.TracedStamp boxSize={"3rem"} />
+        <Stamps.RedFlower boxSize={"3rem"} />
+        <Stamps.RedGiveth boxSize={"3rem"} />
+        <Stamps.RedMoney boxSize={"3rem"} />
+        <Stamps.RedStamp boxSize={"3rem"} />
+        <Stamps.GoldenLeaves boxSize={"3rem"} />
+        <Stamps.GoldenStamp boxSize={"3rem"} />
       </Box>
     </div>
   );
