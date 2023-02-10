@@ -11,7 +11,8 @@ import {
   Text,
   Navbar,
   useDisclosure,
-  ConfirmationModal
+  ConfirmationModal,
+  Breadcrumbs
 } from "ui";
 import { Form } from "../components";
 
@@ -182,6 +183,35 @@ export default function Docs() {
                 <Stamps.GoldenLeaves boxSize={"3rem"} />
                 <Stamps.GoldenStamp boxSize={"3rem"} />
               </Box>
+              <Breadcrumbs
+                items={[
+                  {
+                    label: "Basic information",
+                    href: "/basic-info",
+                    isComplete: true,
+                  },
+                  {
+                    label: "Compensation and benefits",
+                    href: "/compensation",
+                    isComplete: false,
+                  },
+                  {
+                    label: "Governing law",
+                    href: "/governing-law",
+                    isComplete: false,
+                  },
+                  {
+                    label: "Governing law 2",
+                    href: "/governing-law",
+                    isComplete: false,
+                  },
+                  {
+                    label: "Governing law 3",
+                    href: "/governing-law",
+                    isComplete: false,
+                  },
+                ]}
+              />
             </VStack>
           </Stack>
         <Button onClick={onOpen}>Open modal</Button>
