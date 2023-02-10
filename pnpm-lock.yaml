@@ -127,6 +127,7 @@ importers:
       '@emotion/styled': ^11.10.5
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
+      dayjs: ^1.11.7
       eslint-config-custom: workspace:*
       formik: ^2.2.9
       framer-motion: ^9.0.2
@@ -140,6 +141,7 @@ importers:
       '@chakra-ui/styled-system': 2.5.1
       '@emotion/react': 11.10.5_kzbn2opkn2327fwg5yzwzya5o4
       '@emotion/styled': 11.10.5_qvatmowesywn4ye42qoh247szu
+      dayjs: 1.11.7
       formik: 2.2.9_react@18.2.0
       framer-motion: 9.0.2_react@18.2.0
     devDependencies:
@@ -4260,6 +4262,10 @@ packages:
     engines: {node: '>=0.10'}
     dependencies:
       assert-plus: 1.0.0
+    dev: false
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: false
 
   /debug/2.6.9:
