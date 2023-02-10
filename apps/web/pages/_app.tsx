@@ -1,4 +1,9 @@
 import "@rainbow-me/rainbowkit/styles.css";
+import "@fontsource/crimson-pro/500.css";
+import "@fontsource/crimson-pro/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import type { AppProps } from "next/app";
 import NextHead from "next/head";

@@ -1,25 +1,27 @@
-// import Heading from "./HeadingCustomization";
-// import Text from "./TextCustomization";
-// import Button from "./ButtonCustomization";
-// import Modal from "./ModalCustomization";
-// import Input from "./InputCustomization";
-// import Checkbox from "./CheckboxCustomization";
-// import Card from "./CardCustomization";
+import { extendTheme } from "@chakra-ui/react";
+
+import Heading from "./HeadingCustomization";
+import Button from "./ButtonCustomization";
+import Modal from "./ModalCustomization";
+import Input from "./InputCustomization";
+import Checkbox from "./CheckboxCustomization";
+import Card from "./CardCustomization";
+import Text from "./TextCustomization";
 
 const theme = {
   fonts: {
     heading: `"Crimson Pro", serif`,
     body: `"Inter", sans-serif`,
   },
-  // components: {
-  //   Text,
-  //   Heading,
-  //   Button,
-  //   Modal,
-  //   Input,
-  //   Checkbox,
-  //   Card,
-  // },
+  components: {
+    Text,
+    Card,
+    Heading,
+    Button,
+    Modal,
+    Input,
+    Checkbox,
+  },
   textStyles: {
     subtitle1: {
       fontWeight: "regular",
@@ -83,4 +85,4 @@ const theme = {
   },
 };
 
-export default theme;
+export default extendTheme(theme);
