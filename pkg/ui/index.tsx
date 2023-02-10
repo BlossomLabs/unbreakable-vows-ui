@@ -12,5 +12,6 @@ export * as Illustrations from "./components/Illustrations";
 export * as Stamps from "./components/Stamps";
 
 export { default as Navbar } from './components/Navbar'
+export { default as ConfirmationModal } from './components/ConfirmationModal'
 export { default as Input } from './components/InputField'
 export { default as ThemeProvider } from './theme'

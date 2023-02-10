@@ -9,11 +9,15 @@ import {
   VStack, 
   HStack, 
   Text,
-  Navbar
+  Navbar,
+  useDisclosure,
+  ConfirmationModal
 } from "ui";
 import { Form } from "../components";
 
 export default function Docs() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const textStyles = ["subtitle1", "subtitle2", "body1", "body2", "tooltip"];
   const headingVariants = [
     ["h1", "2xl"],
@@ -180,7 +184,15 @@ export default function Docs() {
               </Box>
             </VStack>
           </Stack>
+        <Button onClick={onOpen}>Open modal</Button>
         </Box>
+        <ConfirmationModal
+          isOpen={isOpen}
+          onClose={onClose}
+          title={"Are you sure you want to exit the process?"}
+        >
+          All the information you filled will not be saved
+        </ConfirmationModal>
         <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"white"}>
           <Form />
         </Box>
