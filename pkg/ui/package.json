@@ -24,6 +24,7 @@
     "@emotion/styled": "^11.10.5",
     "dayjs": "^1.11.7",
     "formik": "^2.2.9",
-    "framer-motion": "^9.0.2"
+    "framer-motion": "^9.0.2",
+    "react-select": "^5.7.0"
   }
 }
