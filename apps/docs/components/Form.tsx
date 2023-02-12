@@ -8,7 +8,9 @@ import {
 	Input,
 	IconButton,
 	ChakraIcons,
-	Button
+	Button,
+  Stamps,
+  Select
 } from 'ui'
 
 interface Values {
@@ -90,6 +92,22 @@ export default function FormExample() {
               name={"search"}
               placeholder={"Search..."}
               variant={"search"}
+            />
+            <Select
+              name={"state"}
+              options={[
+                {
+                  label: "Draft",
+                  value: "draft",
+                  icon: <Stamps.RedGiveth boxSize={8} />,
+                },
+                { label: "Unsigned", value: "unsigned" },
+                { label: "Active", value: "active" },
+                { label: "Terminating", value: "terminating" },
+                { label: "Terminated", value: "terminated" },
+                { label: "Disputing", value: "disputing" },
+              ]}
+              isMulti
             />
             <Button type="submit">Submit</Button>
           </Form>
