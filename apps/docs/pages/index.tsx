@@ -13,7 +13,9 @@ import {
   useDisclosure,
   ConfirmationModal,
   Breadcrumbs,
-  History
+  History,
+  Flex,
+  NewVow
 } from "ui";
 import { Form } from "../components";
 
@@ -72,7 +74,19 @@ export default function Docs() {
                 </VStack>
               </Box>
             </VStack>
-
+            <Box>
+              <Flex flexWrap={"wrap"} gap={3}>
+                <NewVow isSelected={false} Icon={Illustrations.Hat}>
+                  Employment Agreement
+                </NewVow>
+                <NewVow isSelected Icon={Illustrations.Owl}>
+                  Employment Agreement - Selected
+                </NewVow>
+                <NewVow disabled Icon={Illustrations.Potion}>
+                  Employment Agreement - Disabled
+                </NewVow>
+              </Flex>
+            </Box>
             <VStack width={{ base: "100%", lg: "50%" }}>
               <Box bgColor={"white"}>
                 <Heading
