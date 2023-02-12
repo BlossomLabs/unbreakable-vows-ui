@@ -15,7 +15,9 @@ import {
   Breadcrumbs,
   History,
   Flex,
-  NewVow
+  NewVow,
+  SimpleGrid,
+  CreatedVow
 } from "ui";
 import { Form } from "../components";
 
@@ -73,20 +75,45 @@ export default function Docs() {
                   ))}
                 </VStack>
               </Box>
+              <Box>
+                <Flex flexWrap={"wrap"} gap={3}>
+                  <NewVow isSelected={false} Icon={Illustrations.Hat}>
+                    Employment Agreement
+                  </NewVow>
+                  <NewVow isSelected Icon={Illustrations.Owl}>
+                    Employment Agreement - Selected
+                  </NewVow>
+                  <NewVow disabled Icon={Illustrations.Potion}>
+                    Employment Agreement - Disabled
+                  </NewVow>
+                </Flex>
+              </Box>
+              <SimpleGrid
+                w={"full"}
+                spacing={4}
+                templateColumns="repeat(auto-fill, 200px)"
+                templateRows={"300px"}
+              >
+                <CreatedVow
+                  timestamp="2022-11-28T14:20:40.852Z"
+                  title="Independent contractor Agreement"
+                  type="draft"
+                />
+                <CreatedVow
+                  timestamp="2022-11-28T15:24:59.412Z"
+                  title="Independent contractor Agreement"
+                  type="terminated"
+                  isBookmark
+                  isBlocked
+                />
+                <CreatedVow
+                  timestamp="2022-11-28T15:24:59.412Z"
+                  title="Independent contractor Agreement"
+                  type="private"
+                  isBroken
+                />
+              </SimpleGrid>
             </VStack>
-            <Box>
-              <Flex flexWrap={"wrap"} gap={3}>
-                <NewVow isSelected={false} Icon={Illustrations.Hat}>
-                  Employment Agreement
-                </NewVow>
-                <NewVow isSelected Icon={Illustrations.Owl}>
-                  Employment Agreement - Selected
-                </NewVow>
-                <NewVow disabled Icon={Illustrations.Potion}>
-                  Employment Agreement - Disabled
-                </NewVow>
-              </Flex>
-            </Box>
             <VStack width={{ base: "100%", lg: "50%" }}>
               <Box bgColor={"white"}>
                 <Heading
