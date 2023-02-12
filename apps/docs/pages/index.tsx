@@ -17,7 +17,8 @@ import {
   Flex,
   NewVow,
   SimpleGrid,
-  CreatedVow
+  CreatedVow,
+  Contract
 } from "ui";
 import { Form } from "../components";
 
@@ -291,6 +292,9 @@ export default function Docs() {
         </ConfirmationModal>
         <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"white"}>
           <Form />
+        </Box>
+        <Box minW={"100vw"} minH={"100vh"} p={10} bgColor={"secondary.800"}>
+          <Contract contractName={"Employment Agreement"} />
         </Box>
     </>
   );
