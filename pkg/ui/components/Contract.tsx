@@ -8,6 +8,7 @@ import {
   HStack,
   Box,
   Heading,
+  VStack,
 } from "@chakra-ui/react";
 import { Contracts } from "./Illustrations";
 import { EmptyStamp } from "./Stamps";
@@ -29,6 +30,33 @@ function HorizontalLines() {
   );
 }
 
+function Title({ contractName }: { contractName: string }) {
+  return (
+    <VStack spacing={0} align={"center"}>
+      <Contracts.Ornament boxSize={"50%"} />
+      <Box position={"relative"}>
+        <Contracts.TitleDecoration w={"400px"} h={"100%"} />
+        <Box
+          position={"absolute"}
+          top={"50%"}
+          left={"50%"}
+          transform={"translate(-50%, -50%)"}
+        >
+          <Heading
+            variant={"h3"}
+            size={"lg"}
+            color={"secondary.500"}
+            textAlign={"center"}
+          >
+            {contractName}
+          </Heading>
+        </Box>
+      </Box>
+      <Contracts.OrnamentSmall boxSize={"40%"} />
+    </VStack>
+  );
+}
+
 function StampsAndTitle({
   StampLeft,
   StampRight,
@@ -40,27 +68,28 @@ function StampsAndTitle({
 }) {
   const boxSize = { base: "40px", sm: "60px", md: "80px" };
   return (
-    <HStack>
-      {StampLeft ? (
-        <StampLeft boxSize={boxSize} />
-      ) : (
-        <EmptyStamp boxSize={boxSize} />
-      )}
+    <HStack
+      w={"100%"}
+      justify={"center"}
+      align={"center"}
+      position={"absolute"}
+      spacing={"30px"}
+    >
       <Box>
-        <Heading
-          variant={"h3"}
-          size={"lg"}
-          color={"secondary.500"}
-          textAlign={"center"}
-        >
-          {contractName}
-        </Heading>
+        {StampLeft ? (
+          <StampLeft boxSize={boxSize} />
+        ) : (
+          <EmptyStamp boxSize={boxSize} />
+        )}
       </Box>
-      {StampRight ? (
-        <StampRight boxSize={boxSize} />
-      ) : (
-        <EmptyStamp boxSize={boxSize} />
-      )}
+      <Title contractName={contractName} />
+      <Box>
+        {StampRight ? (
+          <StampRight boxSize={boxSize} />
+        ) : (
+          <EmptyStamp boxSize={boxSize} />
+        )}
+      </Box>
     </HStack>
   );
 }
@@ -69,11 +98,12 @@ export default function Contract(props: {
   StampLeft?: React.FC<{ boxSize: Record<string, string> }>;
   StampRight?: React.FC<{ boxSize: Record<string, string> }>;
   contractName: string;
+  children: React.ReactNode;
 }) {
   return (
     <Card variant={"contract"}>
       <CardHeader>
-        <Flex justify={"space-between"} h={"100%"}>
+        <Flex justify={"space-between"} h={"100%"} position={"relative"}>
           <Contracts.DecorationLeft h={"100%"} w={"auto"} />
           <StampsAndTitle {...props} />
           <Contracts.DecorationRight h={"100%"} w={"auto"} />
@@ -82,7 +112,7 @@ export default function Contract(props: {
 
       <CardBody>
         <HorizontalLines />
-        <Box w={"600px"}></Box>
+        <Box w={"600px"}>{props.children}</Box>
         <HorizontalLines />
       </CardBody>
 
