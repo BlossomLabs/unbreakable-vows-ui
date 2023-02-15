@@ -38,7 +38,10 @@ function ItemNumber({ index, isActive, isComplete }: ItemNumberProps) {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const pathname = typeof window !== 'undefined' && window.location && window.location.pathname;
+  const pathname =
+    typeof window !== "undefined" &&
+    window.location &&
+    window.location.pathname;
   return (
     <Breadcrumb
       spacing="8px"

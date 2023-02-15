@@ -81,6 +81,7 @@ function HistoryItem({
       _hover={{ bgColor: "secondary.700" }}
       justify={"space-between"}
       w={"xl"}
+      maxW={"100vw"}
       minH={"4.75rem"}
       align={"center"}
       p={2.5}
