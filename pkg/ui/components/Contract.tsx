@@ -34,11 +34,11 @@ function HorizontalLines() {
 
 function Title({ contractName }: { contractName: string }) {
   return (
-    <GridItem w={"100%"}>
-      <VStack spacing={0} align={"center"} boxSize={"100%"}>
+    <GridItem w={"full"}>
+      <VStack spacing={0} align={"center"} boxSize={"full"}>
         <Contracts.Ornament boxSize={"50%"} />
-        <Box position={"relative"} w={"100%"}>
-          <Contracts.TitleDecoration boxSize={"100%"} />
+        <Box position={"relative"} w={"full"}>
+          <Contracts.TitleDecoration boxSize={"full"} />
           <Box
             position={"absolute"}
             top={"50%"}
@@ -66,11 +66,11 @@ function StampsAndTitle({
   StampRight,
   contractName,
 }: {
-  StampLeft?: React.FC<{ boxSize: Record<string, string> }>;
-  StampRight?: React.FC<{ boxSize: Record<string, string> }>;
+  StampLeft?: React.FC<{ boxSize: Record<string, number> }>;
+  StampRight?: React.FC<{ boxSize: Record<string, number> }>;
   contractName: string;
 }) {
-  const boxSize = { base: "30px", sm: "45px", md: "80px" };
+  const boxSize = { base: 9, sm: 14, md: 20 };
   return (
     <Grid
       position={"absolute"}
@@ -80,8 +80,8 @@ function StampsAndTitle({
       }}
       alignItems={"center"}
       justifyItems={"center"}
-      w={"100%"}
-      h={"100%"}
+      w={"full"}
+      h={"full"}
     >
       <GridItem>
         {StampLeft ? (
@@ -108,11 +108,11 @@ export default function Contract(props: {
   contractName: string;
   children: React.ReactNode;
 }) {
-  const decorationBoxSize = { base: "50px", sm: "70px", md: "100px" };
+  const decorationBoxSize = { base: 12, sm: 16, md: 24 };
   return (
     <Card variant={"contract"}>
       <CardHeader>
-        <Flex justify={"space-between"} h={"100%"} position={"relative"}>
+        <Flex justify={"space-between"} h={"full"} position={"relative"}>
           <Contracts.DecorationLeft boxSize={decorationBoxSize} />
           <StampsAndTitle {...props} />
           <Contracts.DecorationRight boxSize={decorationBoxSize} />
@@ -121,7 +121,7 @@ export default function Contract(props: {
 
       <CardBody>
         <HorizontalLines />
-        <Box w={{ base: "100%", md: "600px" }} px={10}>
+        <Box w={{ base: "full", md: "xl" }} px={10}>
           {props.children}
         </Box>
         <HorizontalLines />
@@ -130,8 +130,8 @@ export default function Contract(props: {
       <CardFooter>
         <Flex
           justify={"space-between"}
-          h={"100%"}
-          w={"100%"}
+          h={"full"}
+          w={"full"}
           alignItems={"flex-end"}
         >
           <Contracts.DecorationLeft
@@ -139,8 +139,8 @@ export default function Contract(props: {
             transform={"rotate(-90deg)"}
           />
           <Contracts.Ornament
-            h={{ base: "30px", sm: "40px", md: "50px" }}
-            w={{ base: "100px", sm: "150px", md: "200px" }}
+            h={{ base: 7, sm: 10, md: 12 }}
+            w={{ base: 24, sm: 36, md: 48 }}
             transform={"rotate(180deg)"}
           />
           <Contracts.DecorationRight
