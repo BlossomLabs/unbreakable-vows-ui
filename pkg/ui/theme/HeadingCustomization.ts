@@ -19,6 +19,9 @@ const Heading = defineStyleConfig({
     },
   },
   sizes: {
+    "2xs": {
+      fontSize: "0.75rem",
+    },
     md: {
       fontSize: "1.125rem",
     },

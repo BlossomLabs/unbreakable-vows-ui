@@ -8,7 +8,7 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const contract = definePartsStyle({
   container: {
     backgroundImage: bg,
-    height: { base: "min-content", lg: "940px" },
+    height: "940px",
     width: { base: "100%", md: "730px" },
   },
   body: {

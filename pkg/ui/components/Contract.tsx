@@ -9,6 +9,8 @@ import {
   Box,
   Heading,
   VStack,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import { Contracts } from "./Illustrations";
 import { EmptyStamp } from "./Stamps";
@@ -32,28 +34,30 @@ function HorizontalLines() {
 
 function Title({ contractName }: { contractName: string }) {
   return (
-    <VStack spacing={0} align={"center"}>
-      <Contracts.Ornament boxSize={"50%"} />
-      <Box position={"relative"}>
-        <Contracts.TitleDecoration w={"400px"} h={"100%"} />
-        <Box
-          position={"absolute"}
-          top={"50%"}
-          left={"50%"}
-          transform={"translate(-50%, -50%)"}
-        >
-          <Heading
-            variant={"h3"}
-            size={"lg"}
-            color={"secondary.500"}
-            textAlign={"center"}
+    <GridItem w={"100%"}>
+      <VStack spacing={0} align={"center"} boxSize={"100%"}>
+        <Contracts.Ornament boxSize={"50%"} />
+        <Box position={"relative"} w={"100%"}>
+          <Contracts.TitleDecoration boxSize={"100%"} />
+          <Box
+            position={"absolute"}
+            top={"50%"}
+            left={"50%"}
+            transform={"translate(-50%, -50%)"}
           >
-            {contractName}
-          </Heading>
+            <Heading
+              variant={"h3"}
+              size={{ base: "2xs", sm: "md", md: "lg" }}
+              color={"secondary.500"}
+              textAlign={"center"}
+            >
+              {contractName}
+            </Heading>
+          </Box>
         </Box>
-      </Box>
-      <Contracts.OrnamentSmall boxSize={"40%"} />
-    </VStack>
+        <Contracts.OrnamentSmall boxSize={"40%"} />
+      </VStack>
+    </GridItem>
   );
 }
 
@@ -66,31 +70,35 @@ function StampsAndTitle({
   StampRight?: React.FC<{ boxSize: Record<string, string> }>;
   contractName: string;
 }) {
-  const boxSize = { base: "40px", sm: "60px", md: "80px" };
+  const boxSize = { base: "30px", sm: "45px", md: "80px" };
   return (
-    <HStack
-      w={"100%"}
-      justify={"center"}
-      align={"center"}
+    <Grid
       position={"absolute"}
-      spacing={"30px"}
+      templateColumns={{
+        base: "0.75fr 1.75fr 0.75fr",
+        sm: "0.5fr 1.5fr 0.5fr",
+      }}
+      alignItems={"center"}
+      justifyItems={"center"}
+      w={"100%"}
+      h={"100%"}
     >
-      <Box>
+      <GridItem>
         {StampLeft ? (
           <StampLeft boxSize={boxSize} />
         ) : (
           <EmptyStamp boxSize={boxSize} />
         )}
-      </Box>
+      </GridItem>
       <Title contractName={contractName} />
-      <Box>
+      <GridItem>
         {StampRight ? (
           <StampRight boxSize={boxSize} />
         ) : (
           <EmptyStamp boxSize={boxSize} />
         )}
-      </Box>
-    </HStack>
+      </GridItem>
+    </Grid>
   );
 }
 
@@ -100,19 +108,22 @@ export default function Contract(props: {
   contractName: string;
   children: React.ReactNode;
 }) {
+  const decorationBoxSize = { base: "50px", sm: "70px", md: "100px" };
   return (
     <Card variant={"contract"}>
       <CardHeader>
         <Flex justify={"space-between"} h={"100%"} position={"relative"}>
-          <Contracts.DecorationLeft h={"100%"} w={"auto"} />
+          <Contracts.DecorationLeft boxSize={decorationBoxSize} />
           <StampsAndTitle {...props} />
-          <Contracts.DecorationRight h={"100%"} w={"auto"} />
+          <Contracts.DecorationRight boxSize={decorationBoxSize} />
         </Flex>
       </CardHeader>
 
       <CardBody>
         <HorizontalLines />
-        <Box w={"600px"}>{props.children}</Box>
+        <Box w={{ base: "100%", md: "600px" }} px={10}>
+          {props.children}
+        </Box>
         <HorizontalLines />
       </CardBody>
 
@@ -124,8 +135,7 @@ export default function Contract(props: {
           alignItems={"flex-end"}
         >
           <Contracts.DecorationLeft
-            h={"100%"}
-            w={"auto"}
+            boxSize={decorationBoxSize}
             transform={"rotate(-90deg)"}
           />
           <Contracts.Ornament
@@ -134,8 +144,7 @@ export default function Contract(props: {
             transform={"rotate(180deg)"}
           />
           <Contracts.DecorationRight
-            h={"100%"}
-            w={"auto"}
+            boxSize={decorationBoxSize}
             transform={"rotate(90deg)"}
           />
         </Flex>
