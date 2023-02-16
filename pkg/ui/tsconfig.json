@@ -1,8 +1,9 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["."],
+  "include": ["src"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
-    "typeRoots" : ["node_modules/@types", "types"]
-  }
+    "noEmit": true,
+  },
+  "references": [{ "path": "./tsconfig.node.json" }],
 }

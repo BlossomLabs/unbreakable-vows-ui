@@ -103,8 +103,8 @@ function StampsAndTitle({
 }
 
 export default function Contract(props: {
-  StampLeft?: React.FC<{ boxSize: Record<string, string> }>;
-  StampRight?: React.FC<{ boxSize: Record<string, string> }>;
+  StampLeft?: React.FC<{ boxSize: Record<string, number> }>;
+  StampRight?: React.FC<{ boxSize: Record<string, number> }>;
   contractName: string;
   children: React.ReactNode;
 }) {
